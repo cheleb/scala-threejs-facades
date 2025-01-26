@@ -3,7 +3,14 @@ package typings.three
 import scala.scalajs.js
 import js.annotation.*
 import org.scalajs.dom.*
-import org.scalajs.dom.raw.{HTMLElement, HTMLDocument, HTMLMediaElement, HTMLVideoElement, HTMLCanvasElement, HTMLImageElement}
+import org.scalajs.dom.raw.{
+  HTMLElement,
+  HTMLDocument,
+  HTMLMediaElement,
+  HTMLVideoElement,
+  HTMLCanvasElement,
+  HTMLImageElement
+}
 import org.scalajs.dom.raw.{WebGLShader, WebGLFramebuffer}
 import org.scalajs.dom.experimental.gamepad.*
 import scalajs.js.typedarray.*
@@ -32,18 +39,14 @@ import typings.three.math.interpolants.*
 import typings.three.audio.*
 import typings.three.lights.*
 
-type Record[K,V] = js.native
-type WebGLBuffer = js.native
-type MediaStream = js.native
-type ImageBitmap = js.native
-type BufferSource = js.native
+type Record[K, V] = js.native
+
 type MimeType = js.native
-type WebGL2RenderingContext = js.native
 type DOMPointReadOnly = js.native
 type DOMHighResTimeStamp = js.native
 
 @js.native
-@JSImport("three","REVISION")
+@JSImport("three", "REVISION")
 val REVISION: String = js.native
 
 @js.native
@@ -55,680 +58,690 @@ trait TOUCH extends js.Object
 @js.native
 trait CullFace extends js.Object
 @js.native
-@JSImport("three","CullFaceNone")
+@JSImport("three", "CullFaceNone")
 val CullFaceNone: CullFace = js.native
 @js.native
-@JSImport("three","CullFaceBack")
+@JSImport("three", "CullFaceBack")
 val CullFaceBack: CullFace = js.native
 @js.native
-@JSImport("three","CullFaceFront")
+@JSImport("three", "CullFaceFront")
 val CullFaceFront: CullFace = js.native
 @js.native
-@JSImport("three","CullFaceFrontBack")
+@JSImport("three", "CullFaceFrontBack")
 val CullFaceFrontBack: CullFace = js.native
 
 @js.native
 trait ShadowMapType extends js.Object
 @js.native
-@JSImport("three","BasicShadowMap")
+@JSImport("three", "BasicShadowMap")
 val BasicShadowMap: ShadowMapType = js.native
 @js.native
-@JSImport("three","PCFShadowMap")
+@JSImport("three", "PCFShadowMap")
 val PCFShadowMap: ShadowMapType = js.native
 @js.native
-@JSImport("three","PCFSoftShadowMap")
+@JSImport("three", "PCFSoftShadowMap")
 val PCFSoftShadowMap: ShadowMapType = js.native
 @js.native
-@JSImport("three","VSMShadowMap")
+@JSImport("three", "VSMShadowMap")
 val VSMShadowMap: ShadowMapType = js.native
 
 @js.native
 trait Side extends js.Object
 @js.native
-@JSImport("three","FrontSide")
+@JSImport("three", "FrontSide")
 val FrontSide: Side = js.native
 @js.native
-@JSImport("three","BackSide")
+@JSImport("three", "BackSide")
 val BackSide: Side = js.native
 @js.native
-@JSImport("three","DoubleSide")
+@JSImport("three", "DoubleSide")
 val DoubleSide: Side = js.native
 
 @js.native
 trait Shading extends js.Object
 @js.native
-@JSImport("three","FlatShading")
+@JSImport("three", "FlatShading")
 val FlatShading: Shading = js.native
 @js.native
-@JSImport("three","SmoothShading")
+@JSImport("three", "SmoothShading")
 val SmoothShading: Shading = js.native
 
 @js.native
 trait Blending extends js.Object
 @js.native
-@JSImport("three","NoBlending")
+@JSImport("three", "NoBlending")
 val NoBlending: Blending = js.native
 @js.native
-@JSImport("three","NormalBlending")
+@JSImport("three", "NormalBlending")
 val NormalBlending: Blending = js.native
 @js.native
-@JSImport("three","AdditiveBlending")
+@JSImport("three", "AdditiveBlending")
 val AdditiveBlending: Blending = js.native
 @js.native
-@JSImport("three","SubtractiveBlending")
+@JSImport("three", "SubtractiveBlending")
 val SubtractiveBlending: Blending = js.native
 @js.native
-@JSImport("three","MultiplyBlending")
+@JSImport("three", "MultiplyBlending")
 val MultiplyBlending: Blending = js.native
 @js.native
-@JSImport("three","CustomBlending")
+@JSImport("three", "CustomBlending")
 val CustomBlending: Blending = js.native
 
 @js.native
 trait BlendingEquation extends js.Object
 @js.native
-@JSImport("three","AddEquation")
+@JSImport("three", "AddEquation")
 val AddEquation: BlendingEquation = js.native
 @js.native
-@JSImport("three","SubtractEquation")
+@JSImport("three", "SubtractEquation")
 val SubtractEquation: BlendingEquation = js.native
 @js.native
-@JSImport("three","ReverseSubtractEquation")
+@JSImport("three", "ReverseSubtractEquation")
 val ReverseSubtractEquation: BlendingEquation = js.native
 @js.native
-@JSImport("three","MinEquation")
+@JSImport("three", "MinEquation")
 val MinEquation: BlendingEquation = js.native
 @js.native
-@JSImport("three","MaxEquation")
+@JSImport("three", "MaxEquation")
 val MaxEquation: BlendingEquation = js.native
 
 @js.native
 trait BlendingDstFactor extends js.Object
 @js.native
-@JSImport("three","ZeroFactor")
+@JSImport("three", "ZeroFactor")
 val ZeroFactor: BlendingDstFactor = js.native
 @js.native
-@JSImport("three","OneFactor")
+@JSImport("three", "OneFactor")
 val OneFactor: BlendingDstFactor = js.native
 @js.native
-@JSImport("three","SrcColorFactor")
+@JSImport("three", "SrcColorFactor")
 val SrcColorFactor: BlendingDstFactor = js.native
 @js.native
-@JSImport("three","OneMinusSrcColorFactor")
+@JSImport("three", "OneMinusSrcColorFactor")
 val OneMinusSrcColorFactor: BlendingDstFactor = js.native
 @js.native
-@JSImport("three","SrcAlphaFactor")
+@JSImport("three", "SrcAlphaFactor")
 val SrcAlphaFactor: BlendingDstFactor = js.native
 @js.native
-@JSImport("three","OneMinusSrcAlphaFactor")
+@JSImport("three", "OneMinusSrcAlphaFactor")
 val OneMinusSrcAlphaFactor: BlendingDstFactor = js.native
 @js.native
-@JSImport("three","DstAlphaFactor")
+@JSImport("three", "DstAlphaFactor")
 val DstAlphaFactor: BlendingDstFactor = js.native
 @js.native
-@JSImport("three","OneMinusDstAlphaFactor")
+@JSImport("three", "OneMinusDstAlphaFactor")
 val OneMinusDstAlphaFactor: BlendingDstFactor = js.native
 @js.native
-@JSImport("three","DstColorFactor")
+@JSImport("three", "DstColorFactor")
 val DstColorFactor: BlendingDstFactor = js.native
 @js.native
-@JSImport("three","OneMinusDstColorFactor")
+@JSImport("three", "OneMinusDstColorFactor")
 val OneMinusDstColorFactor: BlendingDstFactor = js.native
 
 @js.native
 trait BlendingSrcFactor extends js.Object
 @js.native
-@JSImport("three","SrcAlphaSaturateFactor")
+@JSImport("three", "SrcAlphaSaturateFactor")
 val SrcAlphaSaturateFactor: BlendingSrcFactor = js.native
 
 @js.native
 trait DepthModes extends js.Object
 @js.native
-@JSImport("three","NeverDepth")
+@JSImport("three", "NeverDepth")
 val NeverDepth: DepthModes = js.native
 @js.native
-@JSImport("three","AlwaysDepth")
+@JSImport("three", "AlwaysDepth")
 val AlwaysDepth: DepthModes = js.native
 @js.native
-@JSImport("three","LessDepth")
+@JSImport("three", "LessDepth")
 val LessDepth: DepthModes = js.native
 @js.native
-@JSImport("three","LessEqualDepth")
+@JSImport("three", "LessEqualDepth")
 val LessEqualDepth: DepthModes = js.native
 @js.native
-@JSImport("three","EqualDepth")
+@JSImport("three", "EqualDepth")
 val EqualDepth: DepthModes = js.native
 @js.native
-@JSImport("three","GreaterEqualDepth")
+@JSImport("three", "GreaterEqualDepth")
 val GreaterEqualDepth: DepthModes = js.native
 @js.native
-@JSImport("three","GreaterDepth")
+@JSImport("three", "GreaterDepth")
 val GreaterDepth: DepthModes = js.native
 @js.native
-@JSImport("three","NotEqualDepth")
+@JSImport("three", "NotEqualDepth")
 val NotEqualDepth: DepthModes = js.native
 
 @js.native
 trait Combine extends js.Object
 @js.native
-@JSImport("three","MultiplyOperation")
+@JSImport("three", "MultiplyOperation")
 val MultiplyOperation: Combine = js.native
 @js.native
-@JSImport("three","MixOperation")
+@JSImport("three", "MixOperation")
 val MixOperation: Combine = js.native
 @js.native
-@JSImport("three","AddOperation")
+@JSImport("three", "AddOperation")
 val AddOperation: Combine = js.native
 
 @js.native
 trait ToneMapping extends js.Object
 @js.native
-@JSImport("three","NoToneMapping")
+@JSImport("three", "NoToneMapping")
 val NoToneMapping: ToneMapping = js.native
 @js.native
-@JSImport("three","LinearToneMapping")
+@JSImport("three", "LinearToneMapping")
 val LinearToneMapping: ToneMapping = js.native
 @js.native
-@JSImport("three","ReinhardToneMapping")
+@JSImport("three", "ReinhardToneMapping")
 val ReinhardToneMapping: ToneMapping = js.native
 @js.native
-@JSImport("three","CineonToneMapping")
+@JSImport("three", "CineonToneMapping")
 val CineonToneMapping: ToneMapping = js.native
 @js.native
-@JSImport("three","ACESFilmicToneMapping")
+@JSImport("three", "ACESFilmicToneMapping")
 val ACESFilmicToneMapping: ToneMapping = js.native
 
 @js.native
 trait Mapping extends js.Object
 @js.native
-@JSImport("three","UVMapping")
+@JSImport("three", "UVMapping")
 val UVMapping: Mapping = js.native
 @js.native
-@JSImport("three","CubeReflectionMapping")
+@JSImport("three", "CubeReflectionMapping")
 val CubeReflectionMapping: Mapping = js.native
 @js.native
-@JSImport("three","CubeRefractionMapping")
+@JSImport("three", "CubeRefractionMapping")
 val CubeRefractionMapping: Mapping = js.native
 @js.native
-@JSImport("three","EquirectangularReflectionMapping")
+@JSImport("three", "EquirectangularReflectionMapping")
 val EquirectangularReflectionMapping: Mapping = js.native
 @js.native
-@JSImport("three","EquirectangularRefractionMapping")
+@JSImport("three", "EquirectangularRefractionMapping")
 val EquirectangularRefractionMapping: Mapping = js.native
 @js.native
-@JSImport("three","CubeUVReflectionMapping")
+@JSImport("three", "CubeUVReflectionMapping")
 val CubeUVReflectionMapping: Mapping = js.native
 @js.native
-@JSImport("three","CubeUVRefractionMapping")
+@JSImport("three", "CubeUVRefractionMapping")
 val CubeUVRefractionMapping: Mapping = js.native
 
 @js.native
 trait Wrapping extends js.Object
 @js.native
-@JSImport("three","RepeatWrapping")
+@JSImport("three", "RepeatWrapping")
 val RepeatWrapping: Wrapping = js.native
 @js.native
-@JSImport("three","ClampToEdgeWrapping")
+@JSImport("three", "ClampToEdgeWrapping")
 val ClampToEdgeWrapping: Wrapping = js.native
 @js.native
-@JSImport("three","MirroredRepeatWrapping")
+@JSImport("three", "MirroredRepeatWrapping")
 val MirroredRepeatWrapping: Wrapping = js.native
 
 @js.native
 trait TextureFilter extends js.Object
 @js.native
-@JSImport("three","NearestFilter")
+@JSImport("three", "NearestFilter")
 val NearestFilter: TextureFilter = js.native
 @js.native
-@JSImport("three","NearestMipmapNearestFilter")
+@JSImport("three", "NearestMipmapNearestFilter")
 val NearestMipmapNearestFilter: TextureFilter = js.native
 @js.native
-@JSImport("three","NearestMipMapNearestFilter")
+@JSImport("three", "NearestMipMapNearestFilter")
 val NearestMipMapNearestFilter: TextureFilter = js.native
 @js.native
-@JSImport("three","NearestMipmapLinearFilter")
+@JSImport("three", "NearestMipmapLinearFilter")
 val NearestMipmapLinearFilter: TextureFilter = js.native
 @js.native
-@JSImport("three","NearestMipMapLinearFilter")
+@JSImport("three", "NearestMipMapLinearFilter")
 val NearestMipMapLinearFilter: TextureFilter = js.native
 @js.native
-@JSImport("three","LinearFilter")
+@JSImport("three", "LinearFilter")
 val LinearFilter: TextureFilter = js.native
 @js.native
-@JSImport("three","LinearMipmapNearestFilter")
+@JSImport("three", "LinearMipmapNearestFilter")
 val LinearMipmapNearestFilter: TextureFilter = js.native
 @js.native
-@JSImport("three","LinearMipMapNearestFilter")
+@JSImport("three", "LinearMipMapNearestFilter")
 val LinearMipMapNearestFilter: TextureFilter = js.native
 @js.native
-@JSImport("three","LinearMipmapLinearFilter")
+@JSImport("three", "LinearMipmapLinearFilter")
 val LinearMipmapLinearFilter: TextureFilter = js.native
 @js.native
-@JSImport("three","LinearMipMapLinearFilter")
+@JSImport("three", "LinearMipMapLinearFilter")
 val LinearMipMapLinearFilter: TextureFilter = js.native
 
 @js.native
 trait TextureDataType extends js.Object
 @js.native
-@JSImport("three","UnsignedByteType")
+@JSImport("three", "UnsignedByteType")
 val UnsignedByteType: TextureDataType = js.native
 @js.native
-@JSImport("three","ByteType")
+@JSImport("three", "ByteType")
 val ByteType: TextureDataType = js.native
 @js.native
-@JSImport("three","ShortType")
+@JSImport("three", "ShortType")
 val ShortType: TextureDataType = js.native
 @js.native
-@JSImport("three","UnsignedShortType")
+@JSImport("three", "UnsignedShortType")
 val UnsignedShortType: TextureDataType = js.native
 @js.native
-@JSImport("three","IntType")
+@JSImport("three", "IntType")
 val IntType: TextureDataType = js.native
 @js.native
-@JSImport("three","UnsignedIntType")
+@JSImport("three", "UnsignedIntType")
 val UnsignedIntType: TextureDataType = js.native
 @js.native
-@JSImport("three","FloatType")
+@JSImport("three", "FloatType")
 val FloatType: TextureDataType = js.native
 @js.native
-@JSImport("three","HalfFloatType")
+@JSImport("three", "HalfFloatType")
 val HalfFloatType: TextureDataType = js.native
 @js.native
-@JSImport("three","UnsignedShort4444Type")
+@JSImport("three", "UnsignedShort4444Type")
 val UnsignedShort4444Type: TextureDataType = js.native
 @js.native
-@JSImport("three","UnsignedShort5551Type")
+@JSImport("three", "UnsignedShort5551Type")
 val UnsignedShort5551Type: TextureDataType = js.native
 @js.native
-@JSImport("three","UnsignedShort565Type")
+@JSImport("three", "UnsignedShort565Type")
 val UnsignedShort565Type: TextureDataType = js.native
 @js.native
-@JSImport("three","UnsignedInt248Type")
+@JSImport("three", "UnsignedInt248Type")
 val UnsignedInt248Type: TextureDataType = js.native
 
 @js.native
 trait PixelFormat extends js.Object
 @js.native
-@JSImport("three","AlphaFormat")
+@JSImport("three", "AlphaFormat")
 val AlphaFormat: PixelFormat = js.native
 @js.native
-@JSImport("three","RGBFormat")
+@JSImport("three", "RGBFormat")
 val RGBFormat: PixelFormat = js.native
 @js.native
-@JSImport("three","RGBAFormat")
+@JSImport("three", "RGBAFormat")
 val RGBAFormat: PixelFormat = js.native
 @js.native
-@JSImport("three","LuminanceFormat")
+@JSImport("three", "LuminanceFormat")
 val LuminanceFormat: PixelFormat = js.native
 @js.native
-@JSImport("three","LuminanceAlphaFormat")
+@JSImport("three", "LuminanceAlphaFormat")
 val LuminanceAlphaFormat: PixelFormat = js.native
 @js.native
-@JSImport("three","RGBEFormat")
+@JSImport("three", "RGBEFormat")
 val RGBEFormat: PixelFormat = js.native
 @js.native
-@JSImport("three","DepthFormat")
+@JSImport("three", "DepthFormat")
 val DepthFormat: PixelFormat = js.native
 @js.native
-@JSImport("three","DepthStencilFormat")
+@JSImport("three", "DepthStencilFormat")
 val DepthStencilFormat: PixelFormat = js.native
 @js.native
-@JSImport("three","RedFormat")
+@JSImport("three", "RedFormat")
 val RedFormat: PixelFormat = js.native
 @js.native
-@JSImport("three","RedIntegerFormat")
+@JSImport("three", "RedIntegerFormat")
 val RedIntegerFormat: PixelFormat = js.native
 @js.native
-@JSImport("three","RGFormat")
+@JSImport("three", "RGFormat")
 val RGFormat: PixelFormat = js.native
 @js.native
-@JSImport("three","RGIntegerFormat")
+@JSImport("three", "RGIntegerFormat")
 val RGIntegerFormat: PixelFormat = js.native
 @js.native
-@JSImport("three","RGBIntegerFormat")
+@JSImport("three", "RGBIntegerFormat")
 val RGBIntegerFormat: PixelFormat = js.native
 @js.native
-@JSImport("three","RGBAIntegerFormat")
+@JSImport("three", "RGBAIntegerFormat")
 val RGBAIntegerFormat: PixelFormat = js.native
 
-type PixelFormatGPU = "ALPHA" | "RGB" | "RGBA" | "LUMINANCE" | "LUMINANCE_ALPHA" | "RED_INTEGER" | "R8" | "R8_SNORM" | "R8I" | "R8UI" | "R16I" | "R16UI" | "R16F" | "R32I" | "R32UI" | "R32F" | "RG8" | "RG8_SNORM" | "RG8I" | "RG8UI" | "RG16I" | "RG16UI" | "RG16F" | "RG32I" | "RG32UI" | "RG32F" | "RGB565" | "RGB8" | "RGB8_SNORM" | "RGB8I" | "RGB8UI" | "RGB16I" | "RGB16UI" | "RGB16F" | "RGB32I" | "RGB32UI" | "RGB32F" | "RGB9_E5" | "SRGB8" | "R11F_G11F_B10F" | "RGBA4" | "RGBA8" | "RGBA8_SNORM" | "RGBA8I" | "RGBA8UI" | "RGBA16I" | "RGBA16UI" | "RGBA16F" | "RGBA32I" | "RGBA32UI" | "RGBA32F" | "RGB5_A1" | "RGB10_A2" | "RGB10_A2UI" | "SRGB8_ALPHA8" | "DEPTH_COMPONENT16" | "DEPTH_COMPONENT24" | "DEPTH_COMPONENT32F" | "DEPTH24_STENCIL8" | "DEPTH32F_STENCIL8"
+type PixelFormatGPU = "ALPHA" | "RGB" | "RGBA" | "LUMINANCE" | "LUMINANCE_ALPHA" | "RED_INTEGER" | "R8" |
+  "R8_SNORM" | "R8I" | "R8UI" | "R16I" | "R16UI" | "R16F" | "R32I" | "R32UI" | "R32F" | "RG8" |
+  "RG8_SNORM" | "RG8I" | "RG8UI" | "RG16I" | "RG16UI" | "RG16F" | "RG32I" | "RG32UI" | "RG32F" |
+  "RGB565" | "RGB8" | "RGB8_SNORM" | "RGB8I" | "RGB8UI" | "RGB16I" | "RGB16UI" | "RGB16F" | "RGB32I" |
+  "RGB32UI" | "RGB32F" | "RGB9_E5" | "SRGB8" | "R11F_G11F_B10F" | "RGBA4" | "RGBA8" | "RGBA8_SNORM" |
+  "RGBA8I" | "RGBA8UI" | "RGBA16I" | "RGBA16UI" | "RGBA16F" | "RGBA32I" | "RGBA32UI" | "RGBA32F" |
+  "RGB5_A1" | "RGB10_A2" | "RGB10_A2UI" | "SRGB8_ALPHA8" | "DEPTH_COMPONENT16" | "DEPTH_COMPONENT24" |
+  "DEPTH_COMPONENT32F" | "DEPTH24_STENCIL8" | "DEPTH32F_STENCIL8"
 
 @js.native
 trait CompressedPixelFormat extends js.Object
 @js.native
-@JSImport("three","RGB_S3TC_DXT1_Format")
+@JSImport("three", "RGB_S3TC_DXT1_Format")
 val RGB_S3TC_DXT1_Format: CompressedPixelFormat = js.native
 @js.native
-@JSImport("three","RGBA_S3TC_DXT1_Format")
+@JSImport("three", "RGBA_S3TC_DXT1_Format")
 val RGBA_S3TC_DXT1_Format: CompressedPixelFormat = js.native
 @js.native
-@JSImport("three","RGBA_S3TC_DXT3_Format")
+@JSImport("three", "RGBA_S3TC_DXT3_Format")
 val RGBA_S3TC_DXT3_Format: CompressedPixelFormat = js.native
 @js.native
-@JSImport("three","RGBA_S3TC_DXT5_Format")
+@JSImport("three", "RGBA_S3TC_DXT5_Format")
 val RGBA_S3TC_DXT5_Format: CompressedPixelFormat = js.native
 @js.native
-@JSImport("three","RGB_PVRTC_4BPPV1_Format")
+@JSImport("three", "RGB_PVRTC_4BPPV1_Format")
 val RGB_PVRTC_4BPPV1_Format: CompressedPixelFormat = js.native
 @js.native
-@JSImport("three","RGB_PVRTC_2BPPV1_Format")
+@JSImport("three", "RGB_PVRTC_2BPPV1_Format")
 val RGB_PVRTC_2BPPV1_Format: CompressedPixelFormat = js.native
 @js.native
-@JSImport("three","RGBA_PVRTC_4BPPV1_Format")
+@JSImport("three", "RGBA_PVRTC_4BPPV1_Format")
 val RGBA_PVRTC_4BPPV1_Format: CompressedPixelFormat = js.native
 @js.native
-@JSImport("three","RGBA_PVRTC_2BPPV1_Format")
+@JSImport("three", "RGBA_PVRTC_2BPPV1_Format")
 val RGBA_PVRTC_2BPPV1_Format: CompressedPixelFormat = js.native
 @js.native
-@JSImport("three","RGB_ETC1_Format")
+@JSImport("three", "RGB_ETC1_Format")
 val RGB_ETC1_Format: CompressedPixelFormat = js.native
 @js.native
-@JSImport("three","RGB_ETC2_Format")
+@JSImport("three", "RGB_ETC2_Format")
 val RGB_ETC2_Format: CompressedPixelFormat = js.native
 @js.native
-@JSImport("three","RGBA_ETC2_EAC_Format")
+@JSImport("three", "RGBA_ETC2_EAC_Format")
 val RGBA_ETC2_EAC_Format: CompressedPixelFormat = js.native
 @js.native
-@JSImport("three","RGBA_ASTC_4x4_Format")
+@JSImport("three", "RGBA_ASTC_4x4_Format")
 val RGBA_ASTC_4x4_Format: CompressedPixelFormat = js.native
 @js.native
-@JSImport("three","RGBA_ASTC_5x4_Format")
+@JSImport("three", "RGBA_ASTC_5x4_Format")
 val RGBA_ASTC_5x4_Format: CompressedPixelFormat = js.native
 @js.native
-@JSImport("three","RGBA_ASTC_5x5_Format")
+@JSImport("three", "RGBA_ASTC_5x5_Format")
 val RGBA_ASTC_5x5_Format: CompressedPixelFormat = js.native
 @js.native
-@JSImport("three","RGBA_ASTC_6x5_Format")
+@JSImport("three", "RGBA_ASTC_6x5_Format")
 val RGBA_ASTC_6x5_Format: CompressedPixelFormat = js.native
 @js.native
-@JSImport("three","RGBA_ASTC_6x6_Format")
+@JSImport("three", "RGBA_ASTC_6x6_Format")
 val RGBA_ASTC_6x6_Format: CompressedPixelFormat = js.native
 @js.native
-@JSImport("three","RGBA_ASTC_8x5_Format")
+@JSImport("three", "RGBA_ASTC_8x5_Format")
 val RGBA_ASTC_8x5_Format: CompressedPixelFormat = js.native
 @js.native
-@JSImport("three","RGBA_ASTC_8x6_Format")
+@JSImport("three", "RGBA_ASTC_8x6_Format")
 val RGBA_ASTC_8x6_Format: CompressedPixelFormat = js.native
 @js.native
-@JSImport("three","RGBA_ASTC_8x8_Format")
+@JSImport("three", "RGBA_ASTC_8x8_Format")
 val RGBA_ASTC_8x8_Format: CompressedPixelFormat = js.native
 @js.native
-@JSImport("three","RGBA_ASTC_10x5_Format")
+@JSImport("three", "RGBA_ASTC_10x5_Format")
 val RGBA_ASTC_10x5_Format: CompressedPixelFormat = js.native
 @js.native
-@JSImport("three","RGBA_ASTC_10x6_Format")
+@JSImport("three", "RGBA_ASTC_10x6_Format")
 val RGBA_ASTC_10x6_Format: CompressedPixelFormat = js.native
 @js.native
-@JSImport("three","RGBA_ASTC_10x8_Format")
+@JSImport("three", "RGBA_ASTC_10x8_Format")
 val RGBA_ASTC_10x8_Format: CompressedPixelFormat = js.native
 @js.native
-@JSImport("three","RGBA_ASTC_10x10_Format")
+@JSImport("three", "RGBA_ASTC_10x10_Format")
 val RGBA_ASTC_10x10_Format: CompressedPixelFormat = js.native
 @js.native
-@JSImport("three","RGBA_ASTC_12x10_Format")
+@JSImport("three", "RGBA_ASTC_12x10_Format")
 val RGBA_ASTC_12x10_Format: CompressedPixelFormat = js.native
 @js.native
-@JSImport("three","RGBA_ASTC_12x12_Format")
+@JSImport("three", "RGBA_ASTC_12x12_Format")
 val RGBA_ASTC_12x12_Format: CompressedPixelFormat = js.native
 @js.native
-@JSImport("three","SRGB8_ALPHA8_ASTC_4x4_Format")
+@JSImport("three", "SRGB8_ALPHA8_ASTC_4x4_Format")
 val SRGB8_ALPHA8_ASTC_4x4_Format: CompressedPixelFormat = js.native
 @js.native
-@JSImport("three","SRGB8_ALPHA8_ASTC_5x4_Format")
+@JSImport("three", "SRGB8_ALPHA8_ASTC_5x4_Format")
 val SRGB8_ALPHA8_ASTC_5x4_Format: CompressedPixelFormat = js.native
 @js.native
-@JSImport("three","SRGB8_ALPHA8_ASTC_5x5_Format")
+@JSImport("three", "SRGB8_ALPHA8_ASTC_5x5_Format")
 val SRGB8_ALPHA8_ASTC_5x5_Format: CompressedPixelFormat = js.native
 @js.native
-@JSImport("three","SRGB8_ALPHA8_ASTC_6x5_Format")
+@JSImport("three", "SRGB8_ALPHA8_ASTC_6x5_Format")
 val SRGB8_ALPHA8_ASTC_6x5_Format: CompressedPixelFormat = js.native
 @js.native
-@JSImport("three","SRGB8_ALPHA8_ASTC_6x6_Format")
+@JSImport("three", "SRGB8_ALPHA8_ASTC_6x6_Format")
 val SRGB8_ALPHA8_ASTC_6x6_Format: CompressedPixelFormat = js.native
 @js.native
-@JSImport("three","SRGB8_ALPHA8_ASTC_8x5_Format")
+@JSImport("three", "SRGB8_ALPHA8_ASTC_8x5_Format")
 val SRGB8_ALPHA8_ASTC_8x5_Format: CompressedPixelFormat = js.native
 @js.native
-@JSImport("three","SRGB8_ALPHA8_ASTC_8x6_Format")
+@JSImport("three", "SRGB8_ALPHA8_ASTC_8x6_Format")
 val SRGB8_ALPHA8_ASTC_8x6_Format: CompressedPixelFormat = js.native
 @js.native
-@JSImport("three","SRGB8_ALPHA8_ASTC_8x8_Format")
+@JSImport("three", "SRGB8_ALPHA8_ASTC_8x8_Format")
 val SRGB8_ALPHA8_ASTC_8x8_Format: CompressedPixelFormat = js.native
 @js.native
-@JSImport("three","SRGB8_ALPHA8_ASTC_10x5_Format")
+@JSImport("three", "SRGB8_ALPHA8_ASTC_10x5_Format")
 val SRGB8_ALPHA8_ASTC_10x5_Format: CompressedPixelFormat = js.native
 @js.native
-@JSImport("three","SRGB8_ALPHA8_ASTC_10x6_Format")
+@JSImport("three", "SRGB8_ALPHA8_ASTC_10x6_Format")
 val SRGB8_ALPHA8_ASTC_10x6_Format: CompressedPixelFormat = js.native
 @js.native
-@JSImport("three","SRGB8_ALPHA8_ASTC_10x8_Format")
+@JSImport("three", "SRGB8_ALPHA8_ASTC_10x8_Format")
 val SRGB8_ALPHA8_ASTC_10x8_Format: CompressedPixelFormat = js.native
 @js.native
-@JSImport("three","SRGB8_ALPHA8_ASTC_10x10_Format")
+@JSImport("three", "SRGB8_ALPHA8_ASTC_10x10_Format")
 val SRGB8_ALPHA8_ASTC_10x10_Format: CompressedPixelFormat = js.native
 @js.native
-@JSImport("three","SRGB8_ALPHA8_ASTC_12x10_Format")
+@JSImport("three", "SRGB8_ALPHA8_ASTC_12x10_Format")
 val SRGB8_ALPHA8_ASTC_12x10_Format: CompressedPixelFormat = js.native
 @js.native
-@JSImport("three","SRGB8_ALPHA8_ASTC_12x12_Format")
+@JSImport("three", "SRGB8_ALPHA8_ASTC_12x12_Format")
 val SRGB8_ALPHA8_ASTC_12x12_Format: CompressedPixelFormat = js.native
 @js.native
-@JSImport("three","RGBA_BPTC_Format")
+@JSImport("three", "RGBA_BPTC_Format")
 val RGBA_BPTC_Format: CompressedPixelFormat = js.native
 
 @js.native
 trait AnimationActionLoopStyles extends js.Object
 @js.native
-@JSImport("three","LoopOnce")
+@JSImport("three", "LoopOnce")
 val LoopOnce: AnimationActionLoopStyles = js.native
 @js.native
-@JSImport("three","LoopRepeat")
+@JSImport("three", "LoopRepeat")
 val LoopRepeat: AnimationActionLoopStyles = js.native
 @js.native
-@JSImport("three","LoopPingPong")
+@JSImport("three", "LoopPingPong")
 val LoopPingPong: AnimationActionLoopStyles = js.native
 
 @js.native
 trait InterpolationModes extends js.Object
 @js.native
-@JSImport("three","InterpolateDiscrete")
+@JSImport("three", "InterpolateDiscrete")
 val InterpolateDiscrete: InterpolationModes = js.native
 @js.native
-@JSImport("three","InterpolateLinear")
+@JSImport("three", "InterpolateLinear")
 val InterpolateLinear: InterpolationModes = js.native
 @js.native
-@JSImport("three","InterpolateSmooth")
+@JSImport("three", "InterpolateSmooth")
 val InterpolateSmooth: InterpolationModes = js.native
 
 @js.native
 trait InterpolationEndingModes extends js.Object
 @js.native
-@JSImport("three","ZeroCurvatureEnding")
+@JSImport("three", "ZeroCurvatureEnding")
 val ZeroCurvatureEnding: InterpolationEndingModes = js.native
 @js.native
-@JSImport("three","ZeroSlopeEnding")
+@JSImport("three", "ZeroSlopeEnding")
 val ZeroSlopeEnding: InterpolationEndingModes = js.native
 @js.native
-@JSImport("three","WrapAroundEnding")
+@JSImport("three", "WrapAroundEnding")
 val WrapAroundEnding: InterpolationEndingModes = js.native
 
 @js.native
 trait AnimationBlendMode extends js.Object
 @js.native
-@JSImport("three","NormalAnimationBlendMode")
+@JSImport("three", "NormalAnimationBlendMode")
 val NormalAnimationBlendMode: AnimationBlendMode = js.native
 @js.native
-@JSImport("three","AdditiveAnimationBlendMode")
+@JSImport("three", "AdditiveAnimationBlendMode")
 val AdditiveAnimationBlendMode: AnimationBlendMode = js.native
 
 @js.native
 trait TrianglesDrawModes extends js.Object
 @js.native
-@JSImport("three","TrianglesDrawMode")
+@JSImport("three", "TrianglesDrawMode")
 val TrianglesDrawMode: TrianglesDrawModes = js.native
 @js.native
-@JSImport("three","TriangleStripDrawMode")
+@JSImport("three", "TriangleStripDrawMode")
 val TriangleStripDrawMode: TrianglesDrawModes = js.native
 @js.native
-@JSImport("three","TriangleFanDrawMode")
+@JSImport("three", "TriangleFanDrawMode")
 val TriangleFanDrawMode: TrianglesDrawModes = js.native
 
 @js.native
 trait TextureEncoding extends js.Object
 @js.native
-@JSImport("three","LinearEncoding")
+@JSImport("three", "LinearEncoding")
 val LinearEncoding: TextureEncoding = js.native
 @js.native
-@JSImport("three","sRGBEncoding")
+@JSImport("three", "sRGBEncoding")
 val sRGBEncoding: TextureEncoding = js.native
 @js.native
-@JSImport("three","GammaEncoding")
+@JSImport("three", "GammaEncoding")
 val GammaEncoding: TextureEncoding = js.native
 @js.native
-@JSImport("three","RGBEEncoding")
+@JSImport("three", "RGBEEncoding")
 val RGBEEncoding: TextureEncoding = js.native
 @js.native
-@JSImport("three","LogLuvEncoding")
+@JSImport("three", "LogLuvEncoding")
 val LogLuvEncoding: TextureEncoding = js.native
 @js.native
-@JSImport("three","RGBM7Encoding")
+@JSImport("three", "RGBM7Encoding")
 val RGBM7Encoding: TextureEncoding = js.native
 @js.native
-@JSImport("three","RGBM16Encoding")
+@JSImport("three", "RGBM16Encoding")
 val RGBM16Encoding: TextureEncoding = js.native
 @js.native
-@JSImport("three","RGBDEncoding")
+@JSImport("three", "RGBDEncoding")
 val RGBDEncoding: TextureEncoding = js.native
 
 @js.native
 trait DepthPackingStrategies extends js.Object
 @js.native
-@JSImport("three","BasicDepthPacking")
+@JSImport("three", "BasicDepthPacking")
 val BasicDepthPacking: DepthPackingStrategies = js.native
 @js.native
-@JSImport("three","RGBADepthPacking")
+@JSImport("three", "RGBADepthPacking")
 val RGBADepthPacking: DepthPackingStrategies = js.native
 
 @js.native
 trait NormalMapTypes extends js.Object
 @js.native
-@JSImport("three","TangentSpaceNormalMap")
+@JSImport("three", "TangentSpaceNormalMap")
 val TangentSpaceNormalMap: NormalMapTypes = js.native
 @js.native
-@JSImport("three","ObjectSpaceNormalMap")
+@JSImport("three", "ObjectSpaceNormalMap")
 val ObjectSpaceNormalMap: NormalMapTypes = js.native
 
 @js.native
 trait StencilOp extends js.Object
 @js.native
-@JSImport("three","ZeroStencilOp")
+@JSImport("three", "ZeroStencilOp")
 val ZeroStencilOp: StencilOp = js.native
 @js.native
-@JSImport("three","KeepStencilOp")
+@JSImport("three", "KeepStencilOp")
 val KeepStencilOp: StencilOp = js.native
 @js.native
-@JSImport("three","ReplaceStencilOp")
+@JSImport("three", "ReplaceStencilOp")
 val ReplaceStencilOp: StencilOp = js.native
 @js.native
-@JSImport("three","IncrementStencilOp")
+@JSImport("three", "IncrementStencilOp")
 val IncrementStencilOp: StencilOp = js.native
 @js.native
-@JSImport("three","DecrementStencilOp")
+@JSImport("three", "DecrementStencilOp")
 val DecrementStencilOp: StencilOp = js.native
 @js.native
-@JSImport("three","IncrementWrapStencilOp")
+@JSImport("three", "IncrementWrapStencilOp")
 val IncrementWrapStencilOp: StencilOp = js.native
 @js.native
-@JSImport("three","DecrementWrapStencilOp")
+@JSImport("three", "DecrementWrapStencilOp")
 val DecrementWrapStencilOp: StencilOp = js.native
 @js.native
-@JSImport("three","InvertStencilOp")
+@JSImport("three", "InvertStencilOp")
 val InvertStencilOp: StencilOp = js.native
 
 @js.native
 trait StencilFunc extends js.Object
 @js.native
-@JSImport("three","NeverStencilFunc")
+@JSImport("three", "NeverStencilFunc")
 val NeverStencilFunc: StencilFunc = js.native
 @js.native
-@JSImport("three","LessStencilFunc")
+@JSImport("three", "LessStencilFunc")
 val LessStencilFunc: StencilFunc = js.native
 @js.native
-@JSImport("three","EqualStencilFunc")
+@JSImport("three", "EqualStencilFunc")
 val EqualStencilFunc: StencilFunc = js.native
 @js.native
-@JSImport("three","LessEqualStencilFunc")
+@JSImport("three", "LessEqualStencilFunc")
 val LessEqualStencilFunc: StencilFunc = js.native
 @js.native
-@JSImport("three","GreaterStencilFunc")
+@JSImport("three", "GreaterStencilFunc")
 val GreaterStencilFunc: StencilFunc = js.native
 @js.native
-@JSImport("three","NotEqualStencilFunc")
+@JSImport("three", "NotEqualStencilFunc")
 val NotEqualStencilFunc: StencilFunc = js.native
 @js.native
-@JSImport("three","GreaterEqualStencilFunc")
+@JSImport("three", "GreaterEqualStencilFunc")
 val GreaterEqualStencilFunc: StencilFunc = js.native
 @js.native
-@JSImport("three","AlwaysStencilFunc")
+@JSImport("three", "AlwaysStencilFunc")
 val AlwaysStencilFunc: StencilFunc = js.native
 
 @js.native
 trait Usage extends js.Object
 @js.native
-@JSImport("three","StaticDrawUsage")
+@JSImport("three", "StaticDrawUsage")
 val StaticDrawUsage: Usage = js.native
 @js.native
-@JSImport("three","DynamicDrawUsage")
+@JSImport("three", "DynamicDrawUsage")
 val DynamicDrawUsage: Usage = js.native
 @js.native
-@JSImport("three","StreamDrawUsage")
+@JSImport("three", "StreamDrawUsage")
 val StreamDrawUsage: Usage = js.native
 @js.native
-@JSImport("three","StaticReadUsage")
+@JSImport("three", "StaticReadUsage")
 val StaticReadUsage: Usage = js.native
 @js.native
-@JSImport("three","DynamicReadUsage")
+@JSImport("three", "DynamicReadUsage")
 val DynamicReadUsage: Usage = js.native
 @js.native
-@JSImport("three","StreamReadUsage")
+@JSImport("three", "StreamReadUsage")
 val StreamReadUsage: Usage = js.native
 @js.native
-@JSImport("three","StaticCopyUsage")
+@JSImport("three", "StaticCopyUsage")
 val StaticCopyUsage: Usage = js.native
 @js.native
-@JSImport("three","DynamicCopyUsage")
+@JSImport("three", "DynamicCopyUsage")
 val DynamicCopyUsage: Usage = js.native
 @js.native
-@JSImport("three","StreamCopyUsage")
+@JSImport("three", "StreamCopyUsage")
 val StreamCopyUsage: Usage = js.native
 
 @js.native
 trait GLSLVersion extends js.Object
 @js.native
-@JSImport("three","GLSL1")
+@JSImport("three", "GLSL1")
 val GLSL1: GLSLVersion = js.native
 @js.native
-@JSImport("three","GLSL3")
+@JSImport("three", "GLSL3")
 val GLSL3: GLSLVersion = js.native
 
-type BuiltinShaderAttributeName = "position" | "normal" | "uv" | "color" | "skinIndex" | "skinWeight" | "instanceMatrix" | "morphTarget0" | "morphTarget1" | "morphTarget2" | "morphTarget3" | "morphTarget4" | "morphTarget5" | "morphTarget6" | "morphTarget7" | "morphNormal0" | "morphNormal1" | "morphNormal2" | "morphNormal3"
+type BuiltinShaderAttributeName = "position" | "normal" | "uv" | "color" | "skinIndex" | "skinWeight" |
+  "instanceMatrix" | "morphTarget0" | "morphTarget1" | "morphTarget2" | "morphTarget3" | "morphTarget4" |
+  "morphTarget5" | "morphTarget6" | "morphTarget7" | "morphNormal0" | "morphNormal1" | "morphNormal2" |
+  "morphNormal3"
 
 @js.native
-@JSImport("three","MOUSE")
+@JSImport("three", "MOUSE")
 object MOUSE extends js.Object:
-	val LEFT: MOUSE = js.native
-	val MIDDLE: MOUSE = js.native
-	val RIGHT: MOUSE = js.native
-	val ROTATE: MOUSE = js.native
-	val DOLLY: MOUSE = js.native
-	val PAN: MOUSE = js.native
+  val LEFT: MOUSE = js.native
+  val MIDDLE: MOUSE = js.native
+  val RIGHT: MOUSE = js.native
+  val ROTATE: MOUSE = js.native
+  val DOLLY: MOUSE = js.native
+  val PAN: MOUSE = js.native
 
 @js.native
-@JSImport("three","TOUCH")
+@JSImport("three", "TOUCH")
 object TOUCH extends js.Object:
-	val ROTATE: TOUCH = js.native
-	val PAN: TOUCH = js.native
-	val DOLLY_PAN: TOUCH = js.native
-	val DOLLY_ROTATE: TOUCH = js.native
+  val ROTATE: TOUCH = js.native
+  val PAN: TOUCH = js.native
+  val DOLLY_PAN: TOUCH = js.native
+  val DOLLY_ROTATE: TOUCH = js.native
 
 type ColorRepresentation = Color | String | Double

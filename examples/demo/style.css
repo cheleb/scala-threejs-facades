@@ -1,0 +1,47 @@
+#root {
+  font-family: Quicksand, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+}
+
+.srf-form {
+  border: 1px solid gray;
+}
+
+.srf-panel {
+  border: 1px solid gray;
+}
+
+.srf-table {
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+
+.srf-field {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+/** Reducing the size of ui5 inputs of type number to only 100px */
+ui5-input[type="Number"] {
+  width: 100px;
+  min-width: 100px;
+}
+
+.srf-form:has(.srf-invalid) {
+
+  border: 1px solid red;
+
+}
+
+.srf-valid {
+  border: 1px solid transparent;
+}
+
+.srf-invalid {
+  border: 1px solid red;
+}
